@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>website with the code of its own making</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let letterPlace=0;let title=[];function javascriptFunction(){document.body.style.margin='0';document.body.style.padding='0px';let arr=[];const allOfTheCode=javascriptFunction+'()';for(let val of allOfTheCode){arr.push(val)}arr.forEach(function(val,index){const letter=document.createElement("span");document.body.style.display="flex";document.body.style.flexWrap="wrap";document.body.style.justifyContent="center";letter.style.fontFamily="monospace";letter.style.display="inline-flex";letter.style.alignItems="center";letter.style.justifyContent="center";letter.style.height="20px";letter.style.width="20px";document.body.appendChild(letter);document.body.style.height="calc(100vh)";if(val===" "){letter.innerHTML=`<span style="width:75%"></span>`;letter.style.fontSize="3px";letter.style.border="1px solid black";letter.style.textAlign="center"}else{letter.innerHTML=`<span>${val}</span>`;if(val==="w"){if(!title.includes(val)&&index>letterPlace){highlightLetter(letter);letterPlace=index;title.push(val)}}if(val==="e"){checkLetter(letter,val,"w",index)}if(val==="b"){checkLetter(letter,val,"e",index)}if(val==="s"){checkLetter(letter,val,"b",index)}if(val==="i"){checkLetter(letter,val,"s",index)}if(val==="t"){checkLetter(letter,val,"i",index)}if(val==="e"){if(title.includes("t")&&index>letterPlace&&index<374){highlightLetter(letter);letterPlace=index;title.push(val)}}}});function checkLetter(letter,val,lastLetter,index){if(!title.includes(val)&&title.includes(lastLetter)&&index>letterPlace){highlightLetter(letter);letterPlace=index;title.push(val)}}function highlightLetter(letter){letter.style.fontSize="40px"}}
+      javascriptFunction()
+    </script>
+  </body>
+</html>
