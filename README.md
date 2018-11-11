@@ -2,7 +2,7 @@
 
 assignment #3 for `computational approaches to typography` at ITP
 
-### requirements:
+### requirements for local development:
 
 `browser-sync`
 
