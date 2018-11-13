@@ -7,7 +7,17 @@
   </head>
   <body>
     <script type="text/javascript">
-      let letterPlace=0;let title=[];function javascriptFunction(){document.body.style.margin='0';document.body.style.padding='0px';let arr=[];const allOfTheCode=javascriptFunction+'()';for(let val of allOfTheCode){arr.push(val)}arr.forEach(function(val,index){const letter=document.createElement("span");document.body.style.display="flex";document.body.style.flexWrap="wrap";document.body.style.justifyContent="center";letter.style.fontFamily="monospace";letter.style.display="inline-flex";letter.style.alignItems="center";letter.style.justifyContent="center";letter.style.height="20px";letter.style.width="20px";document.body.appendChild(letter);document.body.style.height="calc(100vh)";if(val===" "){letter.innerHTML=`<span style="width:75%"></span>`;letter.style.fontSize="3px";letter.style.border="1px solid black";letter.style.textAlign="center"}else{letter.innerHTML=`<span>${val}</span>`;if(val==="w"){if(!title.includes(val)&&index>letterPlace){highlightLetter(letter);letterPlace=index;title.push(val)}}if(val==="e"){checkLetter(letter,val,"w",index)}if(val==="b"){checkLetter(letter,val,"e",index)}if(val==="s"){checkLetter(letter,val,"b",index)}if(val==="i"){checkLetter(letter,val,"s",index)}if(val==="t"){checkLetter(letter,val,"i",index)}if(val==="e"){if(title.includes("t")&&index>letterPlace&&index<374){highlightLetter(letter);letterPlace=index;title.push(val)}}}});function checkLetter(letter,val,lastLetter,index){if(!title.includes(val)&&title.includes(lastLetter)&&index>letterPlace){highlightLetter(letter);letterPlace=index;title.push(val)}}function highlightLetter(letter){letter.style.fontSize="40px"}}
+      let letterPlace=0;let title=[];function javascriptFunction(){document.body.style.margin='0';document.body.style.padding='0px';let arr=[];const allOfTheCode=javascriptFunction+'()';for(let val of allOfTheCode){arr.push(val)}
+      arr.forEach(function(val,index){const letter=document.createElement("span");document.body.style.display="flex";document.body.style.flexWrap="wrap";document.body.style.justifyContent="center";letter.style.fontFamily="monospace";letter.style.display="inline-flex";letter.style.alignItems="center";letter.style.justifyContent="center";letter.style.height="20px";letter.style.width="20px";document.body.appendChild(letter);document.body.style.height="calc(100vh)";if(val===" "){letter.innerHTML=`<span style="width:75%"></span>`;letter.style.fontSize="3px";letter.style.border="1px solid transparent";letter.style.textAlign="center"
+      console.log(index);if(index===8){letter.innerHTML=`<span style="width:75%">this</span>`;letter.style.fontSize="33px"}
+      if(index===194){letter.innerHTML=`<span style="width:75%">is</span>`;letter.style.fontSize="43px"}
+      if(index===236){letter.innerHTML=`<span style="width:75%">a</span>`;letter.style.fontSize="53px"}
+      if(index===669){letter.innerHTML=`<span style="width:75%">website</span>`;letter.style.fontSize="63px"}
+      if(index===828){letter.innerHTML=`<span style="width:75%">with</span>`;letter.style.fontSize="33px"}
+      if(index===952){letter.innerHTML=`<span style="width:75%">the code</span>`;letter.style.fontSize="43px"}
+      if(index===1060){letter.innerHTML=`<span style="width:75%">of its</span>`;letter.style.fontSize="53px"}
+      if(index===1276){letter.innerHTML=`<span style="width:75%">own</span>`;letter.style.fontSize="63px"}
+      if(index===1383){letter.innerHTML=`<span style="width:75%">making</span>`;letter.style.fontSize="33px"}}else{letter.innerHTML=`<span>${val}</span>`}})}
       javascriptFunction()
     </script>
   </body>
